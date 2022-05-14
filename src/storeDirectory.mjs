@@ -12,7 +12,7 @@ async function main() {
 				, hidden: false
 			});
 	const apiKey = process.env.NFT_STORAGE_KEY;
-	const storage = new NFTStorage({ apiKey });
+	const storage = new NFTStorage({ token: apiKey });
 
 	console.log(`storing ${files.length} file(s) from ${path}`);
 
@@ -29,5 +29,5 @@ async function main() {
 	console.log(status);
 }
 
-// Run command example: node src/storeDirectory.mjs 'E:\Progetti\NFTStorageUpload\storage\images\' true/false
+// Run command example: node src/storeDirectory.mjs 'E:\Progetti\nft-storage-upload\storage\images\' true/false
 main()
